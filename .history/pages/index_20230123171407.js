@@ -24,13 +24,10 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.description}>
-
           <p>
             <Link href="about">About</Link>            <code className={styles.code}>pages/index.js</code>
           </p>
-
           <div>
-
             <a
               href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               target="_blank"
@@ -45,7 +42,6 @@ export default function Home() {
                 height={24}
                 priority
               />
-              
             </a>
           </div>
         </div>
@@ -70,17 +66,7 @@ export default function Home() {
           </div>
         </div>
 
-        <div>Presents</div>
-        <div className={styles.grid}>
-          
-
-        </div>
-        <div className={styles.team}>
-          The Science Team 
-        </div>
-
-        <div className={styles.grid}>
-          
+        <h3>Presents</h3>
 
 
         </div>

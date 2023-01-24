@@ -1,0 +1,21 @@
+[
+    {       
+        "Name": "Albert Einstein",
+        "department": "Theoretical Physicist",
+        "year": "1879-1955",
+        "age": 76
+    },
+    {       
+        "Name": "Madam Curie",
+        "department": "Physicist and Chemist",
+        "year": "1867-1934",
+        "age": 66
+    },
+    {       
+        "Name": "Rick Sanchez",
+        "department": "Physicist",
+        "year": "1958",
+        "age": 65
+    }
+    
+]

@@ -5,7 +5,6 @@ import styles from '@/styles/Home.module.css'
 import data from '../data/education.json'
 import { useState } from 'react'
 import Card from '../components/Card'
-import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,13 +23,11 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <div className={styles.description}>
-
           <p>
-            <Link href="about">About</Link>            <code className={styles.code}>pages/index.js</code>
+            Get started by editing&nbsp;
+            <code className={styles.code}>pages/index.js</code>
           </p>
-
           <div>
-
             <a
               href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               target="_blank"
@@ -45,7 +42,6 @@ export default function Home() {
                 height={24}
                 priority
               />
-              
             </a>
           </div>
         </div>
@@ -70,17 +66,37 @@ export default function Home() {
           </div>
         </div>
 
-        <div>Presents</div>
+        <div>Business Degrees</div>
+        /** Changed div tag to Card tag origin */
         <div className={styles.grid}>
-          
+          {information && information.map((info, index) => {
+
+            if(info.department.toLowerCase() === "business") {                      
+            return (
+              <Card key={index} degree={info.degree} colour="red" font="10px"/>
+              )
+
+            }
+
+          })}
+
 
         </div>
-        <div className={styles.team}>
-          The Science Team 
-        </div>
+        /** Added computing data to Vercel */
+        /** */
+        <div>Computing Degrees</div>
 
         <div className={styles.grid}>
-          
+          {information && information.map((info, index) => {
+
+            if(info.department.toLowerCase() === "computing") {                          
+            return (
+              <div key={index}>{info.degree}</div>
+              )
+
+            }
+
+          })}
 
 
         </div>
@@ -88,6 +104,3 @@ export default function Home() {
     </>
   )
 }
-/** Line 70: Changed div tag to Card tag origin */
-/** Line 84: Added computing data to Vercel */
-/*<div key={index}>{info.degree}</div>*/
